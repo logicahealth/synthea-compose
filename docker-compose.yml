@@ -41,6 +41,7 @@ services:
       - synthea
     ports:
       - 9080:9080
+      - 8001:8001
       - 9430:9430
 networks:
   synthea:
