@@ -9,7 +9,7 @@ Install Docker
 
 Following the instructions here_, install Docker for the proper host system.
 
-When the system has been installed, we recommed that the Docker process be
+When the system has been installed, we recommend that the Docker process be
 given at least 3GB of dedicated memory.
 
 Start docker-compose
@@ -22,7 +22,7 @@ Within this directory, execute :
 
 .. parsed-literal::
 
-  C:\Users\joe.snyder\work\OSEHRA\synthea_compose> **docker-compose up --build**
+  C:\\Users\\joe.snyder\\work\\OSEHRA\\synthea_compose> **docker-compose up --build**
   Building synservice
   Step 1/9 : FROM robcaruso/synthea:1
    ---> e764ee42c084
@@ -77,16 +77,7 @@ Shutting down
 To stop the process, simply hit CTL+C and the containers will attempt to quit
 gracefully.  An additional CTL+C will force the containers down.  
 
-We recommend that ``docker-compose rm`` is run to remove the containers to
-prevent a known issues with the Synthetic Visualization Docker setup.  See
-below for further explanation.
-
-Known Issues
-------------
-
-Due to how the HTTP server is started in the Synthea Visualization container,
-the container will not start correctly after being stopped.  This, in turn, 
-causes the DHP Manager container to not be brought up properly.  
+To remove the containers, execute the following command: ``docker-compose down``
 
 .. _here: https://docs.docker.com/install/
 .. _`SSH Connections`: https://github.com/OSEHRA/docker-vista#roll-and-scroll-access-for-non-cach%C3%A9-installs

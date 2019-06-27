@@ -17,7 +17,7 @@
 version: "3"
 services:
   manager:
-    build: https://github.com/josephsnyder/dhp-synthea-manager.git
+    build: https://github.com/OSEHRA/dhp-synthea-manager.git
     ports:
       - "8081:80"
     links:
@@ -25,7 +25,7 @@ services:
     networks:
       - synthea
   synservice: 
-    build: https://github.com/josephsnyder/dhp-synthea-service.git
+    build: https://github.com/OSEHRA/dhp-synthea-service.git
     links:
       - visual
       - vista
