@@ -19,7 +19,7 @@ services:
   manager:
     build: https://github.com/josephsnyder/dhp-synthea-manager.git
     ports:
-      - 8081:80
+      - "8081:80"
     links:
       - synservice
     networks:
@@ -40,9 +40,10 @@ services:
     networks:
       - synthea
     ports:
-      - 9080:9080
-      - 8001:8001
-      - 9430:9430
+      - "9080:9080"
+      - "8001:8001"
+      - "9430:9430"
+      - "2222:22"
 networks:
   synthea:
     driver: bridge

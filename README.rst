@@ -9,6 +9,9 @@ Install Docker
 
 Following the instructions here_, install Docker for the proper host system.
 
+When the system has been installed, we recommed that the Docker process be
+given at least 3GB of dedicated memory.
+
 Start docker-compose
 ####################
 
