@@ -47,6 +47,8 @@ The final message before the containers are ready is:
 
 .. parsed-literal::
   synservice_1  | 2019-06-12 15:43:33.762  INFO 107 --- [  restartedMain] c.d.d.d.DhpSyntheaServiceApplication     : Started DhpSyntheaServiceApplication in 10.58 seconds (JVM running for 11.231
+  
+Note that it may take up to 10 - 15 minutes to complete the installation.
 
 Accessing the containers
 #########################
@@ -55,7 +57,7 @@ DHP Synthea Manager
 $$$$$$$$$$$$$$$$$$$
 
 Once the scrolling has stopped, visit http://localhost:8081 to view the 
-"DHP Manager" interface and begin to generate patients.
+"DHP Manager" interface and begin to generate patients.  The user interface provides the ability to set the parameters for patient records generation, filter the generated patient list by diagnosis, visualize the individual patient history, and send the patient record to VistA.
 
 Accessing VistA
 $$$$$$$$$$$$$$$
