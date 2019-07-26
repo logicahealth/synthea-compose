@@ -74,6 +74,19 @@ Ports
     * information on connecting found here: `SSH Connections`_
   * 8001: Used for VistALink
 
+FHIR on VistA
+$$$$$$$$$$$$$
+
+The Synthea system now contains both halves of the `FHIR on VistA`_
+system.  The VistA installation has the KIDS build, while the ``fhir``
+service contains the Hapi FHIR implementation.  To access the API,
+visit ``http://localhost:8080/api/metadata``.
+
+Further exercising of the API can be accessed after a patient is imported into
+VistA.  Using the ``VistA ICN`` value, information on the patient can be reported
+by accessing:
+
+``http://localhost:8080/api/Patient/<icn>``
 
 Shutting down
 #############
@@ -86,3 +99,4 @@ To remove the containers, execute the following command: ``docker-compose down``
 .. _here: https://docs.docker.com/install/
 .. _`SSH Connections`: https://github.com/OSEHRA/docker-vista#roll-and-scroll-access-for-non-cach%C3%A9-installs
 .. _Installer: https://code.osehra.org/files/clients/OSEHRA_VistA/Installer_For_All_Clients/OSEHRA_VISTA_GUI_Demo.msi
+.. _`FHIR on VistA`: https://github.com/OSEHRA/FHIR-on-VistA
