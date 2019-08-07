@@ -17,7 +17,9 @@
 version: "3"
 services:
   manager:
-    build: https://github.com/OSEHRA/dhp-synthea-manager.git
+    build:
+      context: https://github.com/OSEHRA/dhp-synthea-manager.git
+      dockerfile: "Dockerfile.compose"
     ports:
       - "8081:80"
     links:
@@ -25,7 +27,9 @@ services:
     networks:
       - synthea
   synservice: 
-    build: https://github.com/OSEHRA/dhp-synthea-service.git
+    build:
+      context: https://github.com/OSEHRA/dhp-synthea-service.git
+      dockerfile: "Dockerfile.compose"
     links:
       - visual
       - vista
@@ -35,8 +39,19 @@ services:
     image: osehra/syntheaviz
     networks:
       - synthea
+  fhir:
+    build:
+       context: https://github.com/OSEHRA/FHIR-on-VistA.git
+       dockerfile: "java-api/Dockerfile.compose"
+    networks:
+      - synthea
+    links:
+      - visual
+      - vista
+    ports:
+      - "8080:8080"
   vista:
-    image: osehra/vehu:201901-syn
+    image: osehra/vehu:201905-syn-fhir
     networks:
       - synthea
     ports:
