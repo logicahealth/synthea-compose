@@ -39,6 +39,8 @@ services:
     image: osehra/syntheaviz
     networks:
       - synthea
+    ports:
+      - "8082:80"
   fhir:
     build:
        context: https://github.com/OSEHRA/FHIR-on-VistA.git
