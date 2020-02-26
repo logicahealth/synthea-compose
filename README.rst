@@ -115,3 +115,6 @@ To remove the containers, execute the following command: ``docker-compose down``
 .. _`SSH Connections`: https://github.com/OSEHRA/docker-vista#roll-and-scroll-access-for-non-cach%C3%A9-installs
 .. _Installer: https://code.osehra.org/files/clients/OSEHRA_VistA/Installer_For_All_Clients/OSEHRA_VISTA_GUI_Demo.msi
 .. _`FHIR on VistA`: https://github.com/OSEHRA/FHIR-on-VistA
+
+
+**Note: The assets in this repository were stewarded by OSEHRA and transferred to Logica on February 14th, 2020 upon OSEHRA's permanent closure. While the work remains available as Open Source for continued community use, copyright and licensing statements may not have been updated to reflect this transfer.**
